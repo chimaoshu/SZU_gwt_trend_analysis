@@ -5,7 +5,11 @@ import json
 def generatePic(keyword):
 
     with open('word_weights.json','r+',encoding='utf-8') as f:
-        keyword_dict = json.loads( f.read() )[keyword]
+        try:
+            keyword_dict = json.loads( f.read() )[keyword]
+        except KeyError:
+            print( '不存在该关键字数据，请先运行 getKeyword.py 更新数据，校外需要连接vpn使用。' )
+            return
 
     #用来正常显示中文标签
     plt.rcParams['font.sans-serif']=['SimHei'] 

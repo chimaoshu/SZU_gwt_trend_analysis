@@ -53,8 +53,8 @@ class machineLearning():
         # keyword 要进行学习的关键字(str)
         
         # 代理地址
-        # PROXY = {}
-        PROXY = {'http': 'localhost:10809','https': 'localhost:10809'}
+        PROXY = {}
+        # PROXY = {'http': 'localhost:10809','https': 'localhost:10809'}
 
         # 最大点击数（超过这个点击数的bug点击数会取模）
         # 有很多公文点击量确实出了问题，尤其是2017年的
